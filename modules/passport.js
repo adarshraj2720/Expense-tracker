@@ -11,7 +11,8 @@ var User = require('../modals/user')
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret:process.env.CLIENT_SECRET,
-    callbackURL: "/auth/google/callback"
+    // http://localhost:3000/auth/oauth2/callback
+    callbackURL: "http://localhost:3000/auth/google/callback"
   },(accessToken, refreshToken ,profile, done)=>{
       console.log(profile);
       var profileData ={
