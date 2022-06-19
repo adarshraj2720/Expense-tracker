@@ -35,7 +35,7 @@ router.get('/auth/google', passport.authenticate('google',{
 )
 
 
-router.get('http://monthlytracker-app.herokuapp.com/auth/google/callback',passport.authenticate('google',
+router.get('/auth/google/callback',passport.authenticate('google',
 {failureRedirect:'/failure'}),(req,res)=>{
   //,session:false ==> use after the /failure
   res.redirect('/dashboard')
