@@ -29,7 +29,7 @@ router.get('/auth/github/callback',passport.authenticate('github',
 )
 
 //google
-router.get('/auth/google', passport.authenticate('google',{
+router.get('http://monthlytracker-app.herokuapp.com/auth/google/callback', passport.authenticate('google',{
   scope:["profile","email "]
 })
 )
