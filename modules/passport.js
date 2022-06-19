@@ -12,7 +12,7 @@ passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret:process.env.CLIENT_SECRET,
     
-    callbackURL: "/auth/google/callback"
+    callbackURL: "http://monthlytracker-app.herokuapp.com/auth/google/callback"
   },(accessToken, refreshToken ,profile, done)=>{
       console.log(profile);
       var profileData ={
